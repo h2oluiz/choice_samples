@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>   
+
+<select name="tipo" id="id_tipo" onchange="ChangeCarList1()">
+<option value="" selected="selected">---------</option>
+<option value="1">Advertencia</option>
+<option value="2">Suspensao</option>
+<option value="3">Descredenciamento</option>
+</select>
+
+</br>
+<select name="tipo1" id="id_tipo1">
+<option value="" selected="selected">---------</option>
+<option value="1">Advertencia</option>
+<option value="2">Suspensao</option>
+<option value="3">Descredenciamento</option>
+</select>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+$('#id_tipo1').attr('disabled','disabled');
+$('#id_tipo1').find('option[value="0"]').attr('selected',true);
+
+function ChangeCarList1() {
+    //alert("Eu sou um alert!");
+    
+    if ($('#id_tipo').val() == 1){
+        $('#id_tipo1').attr('disabled','disabled');
+        $('#id_tipo1').find('option[value="1"]').attr('selected',true);
+        }
+    else{
+        alert($('#id_tipo').val());
+    }
+}
+</script>
+days = forms.ModelChoiceField(queryset=Day.objects.all().order_by('alias'), widget=forms.Select(attrs={"onChange":'refresh()'})
+</body>
+</html>
+
