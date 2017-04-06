@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" 
+       src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	// campo desabilitado
+	$('#campo1').attr("disabled", true);
+	// cor de fundo para o campo
+	$('#campo1').css("background-color", "#cccccc");
+ 
+	$("#enable").click(function (){ 
+		// habilitando o campo
+		$('#campo1').attr("disabled", '');
+		// retornando a cor padrao
+		$('#campo1').css("background-color", "#FFF");
+	});
+});
+</script>
+</head>
+<body>
+Entre com os dados: 
+   <input type="text" id="campo1" name="campo1" /> 
+   <a href="#" id="enable" />Habilitar campo</a>
+</body>
+</html>
